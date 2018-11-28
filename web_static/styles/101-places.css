@@ -1,6 +1,11 @@
 section.places {
   font-size: 30px;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
 }
 /* name and price layer */
 section.places h1 {
@@ -9,17 +14,12 @@ section.places h1 {
 }
 article {
   width: 390px;
-  height: 700px;
-  padding: 20px;
+  min-height: 300px;
   margin: 20px;
   border-radius: 4px;
   border-width: 1px;
   border-color: #FF5A5F;
   border-style: solid;
-  display: inline-block;
-  margin-bottom: 30px;
-  overflow: hidden;
-  /* text-overflow: ellipsis; */
 }
 article h2 {
   font-size: 30px;
@@ -32,64 +32,73 @@ article div.price_by_night {
   border-width: 4px;
   border-radius: 34px;
   float: right;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: 20px;
   position: relative;
-  top: -90px;
+  /* flex: 1; */
+  top: -70px;
   font-size: 30px;
   color: #FF5A5F;
 }
 article div.price_by_night p {
   margin-top: 10px;
+  /* flex: 1; */
 }
 /* for information layer */
 article div.information {
   height: 80px;
+  width: 90%;
+  margin-left: 20px;
+  top: -50px;
   border-top-style: solid;
   border-bottom-style: solid;
   border-color: #DDDDDD;
   border-width: 1px;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  flex: 1;
+}
+section.places article div.information div.max_guest,
+section.places article div.information div.number_rooms,
+section.places article div.information div.number_bathrooms
+{
+  font-size: 15px;
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
 }
 
 section.places article div.information div.max_guest {
   background: url(../images/icon_group.png);
   background-repeat: no-repeat;
   background-position: 5px 0px;
-  display: inline-block;
-  font-size: 15px;
-  margin-top: 5px;
-  padding-top: 40px;
-  margin-left: 10px;
-  padding-right: 20px;
-  padding-bottom: 5px;
 }
 
 section.places article div.information div.number_rooms {
   background: url(../images/icon_bed.png);
   background-repeat: no-repeat;
   background-position: 20px 0px;
-  display: inline-block;
-  font-size: 15px;
-  margin-top: 5px;
-  padding-top: 40px;
-  padding-right: 20px;
-  padding-bottom: 5px;
 }
 
 section.places article div.information div.number_bathrooms {
   background: url(../images/icon_bath.png);
   background-repeat: no-repeat;
   background-position: 10px 0px;
-  display: inline-block;
-  font-size: 15px;
-  margin-top: 5px;
-  padding-top: 40px;
-  padding-bottom: 5px;
 }
 
 /* for User and description layer */
 article div.user, article div.description {
   font-size: 15px;
   text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  top: -40px;
+  display: flex;
+  flex: 1;
 }
 
 /* for amenities layer */
