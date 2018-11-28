@@ -1,4 +1,4 @@
-section.filters {
+body section.filters {
   background-color: white;
   height: 70px;
   width: 100%;
@@ -7,7 +7,7 @@ section.filters {
   border-radius: 4px;
   border-color: #DDDDDD;
 }
-button {
+body section.filters button {
   background-color: #FF5A5F;
   height: 48px;
   width: 20%;
@@ -18,21 +18,21 @@ button {
   margin-right: 30px;
   margin-top: 11px;
 }
-button:hover {
+body section.filters button:hover {
   opacity: 0.9;
 }
-div.locations {
+body section.filters div.locations {
   height: 100%;
   width: 25%;
   border-right-style: solid;
   border-right-width: 1px;
   border-color: #DDDDDD;
   float: left;
-  /* margin-bottom: 11px; */
-  padding-left: 40px
+  padding-left: 40px;
+  position: relative;
 }
 /* general setting for popover for both locations and amenities */
-ul.popover {
+body section.filters ul.popover {
   width: 100%;
   visibility: hidden;
   background-color: #FAFAFA;
@@ -40,11 +40,11 @@ ul.popover {
   border-width: 1px;
   border-radius: 4px;
   border-style: solid;
-  list-style-type: none;
+  display: grid;
+  z-index: 1;
 }
 /* positioning the popover of locations in right location */
 div.locations ul.popover {
-  display: inherit;
   margin: 0px;
   margin-left: -40px;
   padding-left: 40px;
@@ -69,14 +69,12 @@ div.amenities ul.popover {
   padding-left: 60px;
   padding-top: 30px;
   padding-bottom: 30px;
+  margin-left: -40px;
+  list-style-type: none;
 }
 div.amenities:hover ul.popover {
   /* padding-top: 10px; */
   visibility: visible;
-}
-div.amenities ul.popover {
-  margin-left: -40px;
-  list-style-type: none;
 }
 /* positioning location of h2 tag in locations */
 ul.popover h2 {
@@ -84,17 +82,16 @@ ul.popover h2 {
   margin-top: 20px;
 }
 /* positioning location of item in list */
-ul li {
+body section.filters ul li {
   padding-top: 10px;
   margin-left: -20px;
-  list-style-type: none;
 }
-h3 {
+body section.filters h3 {
   font-weight: 600;
   margin-top: 11px;
   margin-bottom: 5px;
 }
-h4 {
+body section.filters h4 {
   font-size: 14px;
   font-weight: 400;
   margin-top: 0px;
