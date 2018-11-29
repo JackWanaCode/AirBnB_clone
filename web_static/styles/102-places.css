@@ -198,3 +198,8 @@ article div.reviews ul li p {
   font-size: 12px;
   margin-top: 0px;
 }
+
+@media screen and (max-width: 500px) {
+    section.places h1 {
+        text-align: center;
+    }
