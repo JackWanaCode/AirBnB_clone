@@ -105,9 +105,9 @@ article div.user, article div.description {
 /* for amenities layer */
 article div.amenities {
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   padding-left: 0px;
-  height: 250px;
+  height: auto;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -125,7 +125,7 @@ article div.amenities h2{
 article div.amenities ul{
   padding-left: 0px;
   margin: 0px;
-  /* margin-top: -480px; */
+  margin-bottom: 40px;
 
 }
 
@@ -160,16 +160,68 @@ article div.amenities li.Wifi {
   padding-left: 60px;
 }
 
+article div.amenities li.No_Wifi {
+  background: url(../images/no_wifi.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 10%;
+  text-align: left;
+  padding-left: 60px;
+}
+
+article div.amenities li.pigeon {
+  background: url(../images/pigeon.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 10%;
+  text-align: left;
+  padding-left: 60px;
+}
+
+article div.amenities li.alien {
+  background: url(../images/alien.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 10%;
+  text-align: left;
+  padding-left: 60px;
+}
+
+article div.amenities li.dinosaur {
+  background: url(../images/dinosaur.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 10%;
+  text-align: left;
+  padding-left: 60px;
+}
+
+article div.amenities li.dangerous {
+  background: url(../images/dangerous.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 10%;
+  text-align: left;
+  padding-left: 60px;
+}
+
+article div.amenities li.Casino {
+  background: url(../images/casino.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 10%;
+  text-align: left;
+  padding-left: 60px;
+}
+
 /* for review layer */
 article div.reviews {
-  margin-top: 40px;
   padding-left: 0px;
   margin-left: 20px;
   margin-right: 20px;
 }
 
 article div.reviews h2{
-  /* margin-bottom: 0px; */
   padding-bottom: 10px;
   font-size: 16px;
   border-bottom-style: solid;

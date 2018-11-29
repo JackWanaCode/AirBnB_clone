@@ -150,24 +150,31 @@ class HBNBCommand(cmd.Cmd):
         else:
             key = str_split[0] + "." + str_split[1]
             if key in all_objs.keys():
-                class_name = HBNBCommand.class_dict[str_split[0]]
-                if str_split[2] in class_name.__dict__.keys():
-                    type_name = type(class_name.__dict__[str_split[2]])
-                else:
-                    type_name = str
+                try:
+                    value = json.loads(str_split[3])
+                except:
+                    value = str_split[3]
                 setattr(all_objs[key], str_split[2],
-                        type_name(str_split[3]))
+                        value)
                 models.storage.save()
             else:
                 print("** no instance found **")
+
 
     def default(self, args):
         """
         Retrieve all instances of a class
         """
         count = 0
-        split_command = args.split('.')
+        """split the text into 2 part, part 1 is Class name
+        part2 is command and its argument
+        """
+
+        split_command = args.split('.', 1)
         if len(split_command) >= 2:
+            """ then split part2 into 2 part, part1 is command name
+            part2 is argument. delimater is '('
+            """
             method = split_command[1].split('(')
             if method[0] == 'all':
                 self.do_all(split_command[0])
@@ -187,6 +194,9 @@ class HBNBCommand(cmd.Cmd):
             elif method[0] == 'update':
                 to_update = method[1].split(')')
                 split1 = to_update[0].split('{')
+                """ when the argument store dictionary, lengh after split
+                should be > 1
+                """
                 if len(split1) == 1:
                     # case of set key and value manually
                     elements = to_update[0].split(",")
