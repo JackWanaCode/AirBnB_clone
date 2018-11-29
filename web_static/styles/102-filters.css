@@ -8,7 +8,6 @@ body section.filters {
   border-color: #DDDDDD;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 body section.filters button.desktop {
   background-color: #FF5A5F;
@@ -18,6 +17,9 @@ body section.filters button.desktop {
   font-size: 18px;
   color: #FFFFFF;
   margin-right: 20px;
+  display: flex;
+  margin-left: auto;
+  justify-content: center;
 }
 
 body section.filters button.mobile {
@@ -29,6 +31,8 @@ body section.filters button.mobile {
   border-width: 4px;
   margin-right: 20px;
   display: none;
+  margin-left: auto;
+  margin-right: 10px;
 }
 
 body section.filters button div {
@@ -124,6 +128,14 @@ body section.filters h4 {
   }
   body section.filters h4 {
     display: none;
+  }
+
+  body section.filters div.locations {
+    width: 35%;
+  }
+
+  body section.filters div.amenities {
+    width: 35%;
   }
 
   body section.filters button.desktop {

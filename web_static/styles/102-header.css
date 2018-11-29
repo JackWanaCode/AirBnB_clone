@@ -8,6 +8,9 @@ header {
   background: url(../images/logo.png);
   background-repeat: no-repeat;
   background-position: 20px center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 @media screen and (max-width: 500px) {

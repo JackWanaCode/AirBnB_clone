@@ -13,11 +13,3 @@ body div.container {
   margin-left: auto;
   margin-right: auto;
 }
-
-@media screen and (max-width: 500px) {
-  body div.container {
-    width: 100%;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-}
